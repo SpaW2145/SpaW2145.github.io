@@ -117,7 +117,10 @@ h1 span {
   background-color: #ddd;
 }
 
-
+.floater {
+  position: relative;
+  padding: 20%;
+}
 
 
 

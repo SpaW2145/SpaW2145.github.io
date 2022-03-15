@@ -96,6 +96,7 @@ body{
     background-attachment: fixed;
     background-position: center; 
     background-size: 100%, 100%;
+    font: 'Trebuchet MS (sans-serif)';
 }
 
 .p5Canvas{
@@ -221,16 +222,6 @@ svg {
 
 
 
-
-
-
-
-/*body {
-  max-width: 37.5rem;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  font-family: 'Lato', sans-serif;
-}*/
 
 * {
   box-sizing: border-box;

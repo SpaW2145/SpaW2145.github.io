@@ -409,3 +409,7 @@ ol, li {
 .p_text{
   color:aqua;
 }
+.profiles img {
+  width: 100%;
+  height: 100%;
+}

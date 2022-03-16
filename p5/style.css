@@ -401,7 +401,13 @@ ol, li {
   height: 100%;
 }
 .p_text{
-  color:aqua;
+  position: relative;
+  color:rgb(255, 255, 255);
+  font-size: 40px;
+  margin-top: 8%;
+  padding-left: 32%;
+  font-variant: small-caps;
+  font-style: oblique;
 }
 .profiles img {
   width: 100%;
@@ -424,7 +430,9 @@ ol, li {
   background-clip:border-box
 }
 .space{
-  margin-top: 70%
+  margin-top: 70%;
+  text-align: center;
+  color: #1f1e20;
 }
 
 

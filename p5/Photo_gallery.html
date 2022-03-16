@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Photo Gallery</title>
   <link rel="stylesheet" href="./style.css">
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body >
@@ -26,7 +26,40 @@
       </div>
       <a class="active"  href="./Photo_gallery.html">Photo Gallery</a>  
     </div>
-    <div class="floater">Hello World</div>
+
+    <div class="floater">
+      <div class="words word-1">
+        <span>W</span>
+        <span>E</span>
+        <span>L</span>
+        <span>C</span>
+        <span>O</span>
+        <span>M</span>
+        <span>E</span>
+      </div>
+      
+      <div class="words word-2">
+        <span>T</span>
+        <span>O</span>
+      </div>
+      
+      <div class="words word-3">
+        <span>C</span>
+        <span>O</span>
+        <span>O</span>
+        <span>L</span>
+      </div>
+    </div>
+
+    <script>$(document).scroll(function() {
+      var y = $(this).scrollTop();
+      if (y > 500) {
+        $('.carousel').fadeIn();
+      } else {
+        $('.carousel').fadeOut();
+      }
+    });</script>
+
     <section class="carousel" aria-label="Gallery">
       <ol class="carousel__viewport">
         <li id="carousel__slide1"
@@ -130,7 +163,6 @@
     </section>
     <div>
       <div class="p_text">
-        Hello
       </div>
 
       <br>
@@ -148,6 +180,7 @@
       <br>
       <br>
     </div>
+    <div class="space"></div>
   </main>
 </body>
 

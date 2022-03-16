@@ -408,6 +408,7 @@ ol, li {
   padding-left: 32%;
   font-variant: small-caps;
   font-style: oblique;
+  display: none;
 }
 .profiles img {
   width: 100%;

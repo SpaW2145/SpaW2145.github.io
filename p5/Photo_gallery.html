@@ -6,18 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Photo Gallery</title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./owlcarousel/dist/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="./owlcarousel/dist/assets/owl.theme.default.min.css">
-  
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body >
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
-
-
-
   <main class="photos">
     
     <div class="topnav">
@@ -68,68 +60,139 @@
       </div>
     </div>
 
-    <!--<script>$(document).scroll(function() {
+    <script>$(document).scroll(function() {
       var y = $(this).scrollTop();
       if (y > 400) {
-        $('.owl-carousel').fadeIn();
+        $('.carousel').fadeIn();
         $('.p_text').fadeIn();
       } else {
-        $('.owl-carousel').fadeOut();
+        $('.carousel').fadeOut();
         $('.p_text').fadeOut();
       }
-    });</script>-->
+    });</script>
 
+    <section class="carousel" aria-label="Gallery">
+      <ol class="carousel__viewport">
+        <li id="carousel__slide1"
+            tabindex="0"
+            class="carousel__slide">
+          <div class="carousel__snapper" class= "box boxed">
+          </div>
+          <div class="box2"><img src="./data/karl saft_karl saft_pdt.jpg"></div>
+        </li>
+        <li id="carousel__slide2"
+            tabindex="0"
+            class="carousel__slide">
+          <div class="carousel__snapper"></div>
+          <div class="box2"><img src="./data/die uhr_Plan de travail 1.jpg"></div>
+        </li>
+        <li id="carousel__slide3"
+            tabindex="0"
+            class="carousel__slide">
+          <div class="carousel__snapper" ></div>
+          <div class="box2"><img src="./data/abend mode_abend_mode_pdt.jpg"></div>
+        </li>
+        <li id="carousel__slide4"
+            tabindex="0"
+            class="carousel__slide">
+          <div class="carousel__snapper"></div>
+          <div class="box2"><img src="./data/schauburg_svchauburg_pdt.jpg"></div>
+        </li>
+        <li id="carousel__slide5"
+            tabindex="0"
+            class="carousel__slide">
+          <div class="carousel__snapper"></div>
+          <div class="box2"><img src="./data/Lebensraum_lebensraum_pdt.jpg"></div>
+        </li>
+        <li id="carousel__slide6"
+            tabindex="0"
+            class="carousel__slide">
+          <div class="carousel__snapper"></div>
+          <div class="box2"><img src="./data/helden bar_helden_bar.jpg"></div>
+        </li>
+        <li id="carousel__slide7"
+            tabindex="0"
+            class="carousel__slide">
+          <div class="carousel__snapper"></div>
+          <div class="box2"><img src="./data/schones wohnen_online wohnen_pdt.jpg"></div>
+        </li>
+        <li id="carousel__slide8"
+            tabindex="0"
+            class="carousel__slide">
+          <div class="carousel__snapper"></div>
+          <div class="box2"><img src="./data/orion_orion_pdt.jpg"></div>
+        </li>
+        <li id="carousel__slide9"
+            tabindex="0"
+            class="carousel__slide">
+          <div class="carousel__snapper"></div>
+          <div class="box1"><img src="./data/bahn.jpg"></div>
+        </li>
+      </ol>
+      <aside class="carousel__navigation">
+        <ol class="carousel__navigation-list">
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide1"
+               class="carousel__navigation-button">Go to slide 1</a>
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide2"
+               class="carousel__navigation-button">Go to slide 2</a>
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide3"
+               class="carousel__navigation-button">Go to slide 3</a>
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide4"
+               class="carousel__navigation-button">Go to slide 4</a>
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide5"
+               class="carousel__navigation-button">Go to slide 5</a>
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide6"
+               class="carousel__navigation-button">Go to slide 6</a>
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide7"
+               class="carousel__navigation-button">Go to slide 7</a>
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide8"
+               class="carousel__navigation-button">Go to slide 8</a>
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide9"
+               class="carousel__navigation-button">Go to slide 9</a>
+          </li>
 
-<script>$('.owl-carousel').owlCarousel({
-  loop:true,
-  margin:10,
-  nav:true,
-  responsive:{
-      0:{
-          items:1
-      },
-      600:{
-          items:3
-      },
-      1000:{
-          items:5
-      }
-  }
-})
-</script>
-<div class="owl-carousel owl-theme">
-  <div class="item"><h4><img calss="box2" src="data/abend mode_abend_mode_pdt.jpg"></h4></div>
-  <div class="item"><h4>2</h4></div>
-  <div class="item"><h4>3</h4></div>
-  <div class="item"><h4>4</h4></div>
-  <div class="item"><h4>5</h4></div>
+          </li>
+        </ol>
+      </aside>
+    </section>
+    <div>
+      <div class="p_text">
+        " This Website is made to make you go cracra - " <br><br>
+        Feodor Rousse
+      </div>
 
-
-</div>
-
-
-    
-<div>
-  <div class="p_text">
-    " This Website is made to make you go cracra - " <br><br>
-    Feodor Rousse
-  </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-</div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
     <div class="space">litteral placeholder</div>
   </main>
 </body>

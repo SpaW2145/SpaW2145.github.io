@@ -14,8 +14,8 @@ y = 50
 
 function draw() {
 
-    Stroke(180,100,60);
-    Point(x+speed,y+speed,10,10)
+    Stroke(180,300,360);
+    ellipset(x+speed,y+speed,10,10)
 
     speed += 0.5
 

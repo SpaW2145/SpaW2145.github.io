@@ -7,7 +7,7 @@ function setup() {
 createCanvas(1080,720);
 angleMode(DEGREES);
 colorMode(HSB,360);
-background(300,0,0,200)
+background(300,0,0)
 }
 
 function draw() {

@@ -1,6 +1,6 @@
 var speed = 1
-var x =50;
-var y=50;
+var x =500;
+var y=250;
 
 
 function setup() {
@@ -12,10 +12,11 @@ background(300,0,0)
 
 function draw() {
 
-    Stroke(180,300,360);
-    ellipset(x,y,10,10)
+    stroke(200,300,360);
+    fill(200,300,360);
+    ellipse(x+speed,y+speed,10,10);
+    if(x >= 1080 ){speed = 1}
 
-    speed += 0.5
 
     
 

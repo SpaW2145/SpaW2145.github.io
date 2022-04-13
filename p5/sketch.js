@@ -38,14 +38,14 @@ class Balls{
             if(this.xspeed > 0){this.xspeed +=1.75}
             if(this.xspeed < 0){this.xspeed -=1.5}
             this.xspeed = -this.xspeed;
-            this.xspeed = this.xspeed * cos(random(PI *2))
+           // this.xspeed = this.xspeed * cos(random(PI *2))
 
         }
         if (this.y > height - this.diameter || this.y < this.diameter) {
             if(this.yspeed > 0){this.yspeed +=1.75}
             if(this.yspeed < 0){this.yspeed -=1.5}
             this.yspeed = -this.yspeed ;
-            this.yspeed = this.yspeed * sin(random(PI *2))
+          //  this.yspeed = this.yspeed * sin(random(PI *2))
     
         }
       }

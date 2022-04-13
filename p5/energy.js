@@ -18,11 +18,13 @@ background(360,0,0)
 
 }
 
-function draw() {
-    fetch('http://localhost:8408/json').then(function(res) {
+fetch('http://localhost:8408/json').then(function(res) {
     return res.json()
 }).then(function(jsonfile) {
-    console.log(jsonfile)
+    console.log(jsonfile)})
+
+function draw() {
+
     var square = int(sqrt(jsonfile.length))+1
     for (var i = 0; i < jsonfile.length; i++) {
 
@@ -45,8 +47,6 @@ function draw() {
         scalar += 0.30;
         size += 0.02
     }
-
-})
     
 
     

@@ -63,8 +63,8 @@ class Balls{
       }
     
       display() {
-        stroke(HUE,SAT,360)
-        fill(HUE,SAT,360)
+        stroke(HUE,300,360)
+        fill(HUE,300,360)
         ellipse(this.x, this.y, this.diameter, this.diameter);
       }
 }

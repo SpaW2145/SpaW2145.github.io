@@ -15,7 +15,7 @@ y = 50
 function draw() {
 
     Stroke(180,100,60);
-    point(x+speed,y+speed)
+    point(x+speed,y+speed,10,10)
 
     speed += 1
 

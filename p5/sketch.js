@@ -31,7 +31,7 @@ class Balls{
         this.yspeed = 2;
     }
     move() {
-        let change = random(1,3)%3
+        let change = random(1,3)*random(0.5,2.2)
         this.x += this.xspeed
         this.y += this.yspeed
         if (this.x > width - this.diameter || this.x < this.diameter){

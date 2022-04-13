@@ -17,7 +17,7 @@ function draw() {
     Stroke(180,100,60);
     point(x+speed,y+speed)
 
-    speed +1
+    speed += 1
 
     
 

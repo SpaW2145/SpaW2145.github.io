@@ -14,7 +14,12 @@ createCanvas(1080,720);
 angleMode(DEGREES);
 colorMode(HSB,360);
 background(360,0,0)
-fetch('http://localhost:8408/json').then(function(res) {
+
+
+}
+
+function draw() {
+    fetch('http://localhost:8408/json').then(function(res) {
     return res.json()
 }).then(function(jsonfile) {
     console.log(jsonfile)
@@ -42,10 +47,6 @@ fetch('http://localhost:8408/json').then(function(res) {
     }
 
 })
-
-}
-
-function draw() {
     
 
     

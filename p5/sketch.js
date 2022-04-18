@@ -18,7 +18,7 @@ function draw() {
 
 
 
-    HUE += 2
+    HUE += 3.5
     if(HUE >= 360){HUE = 0}
     SAT += 1.23
     if(SAT >= 360){SAT = 100}

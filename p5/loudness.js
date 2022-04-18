@@ -14,9 +14,8 @@ createCanvas(1080,720);
 angleMode(DEGREES);
 colorMode(HSB,360);
 background(360,0,0)
-fetch('http://localhost:8408/json').then(function(res) {
-    return res.json()
-}).then(function(jsonfile) {
+fetch('http://localhost:8408/json').then(function(res) {return res.json()}).then(function(jsonfile) {
+    
     console.log(jsonfile)
     var square = int(sqrt(jsonfile.length))+1
     for (var i = 0; i < jsonfile.length; i++) {

@@ -24,12 +24,6 @@ fetch('http://localhost:8408/json').then(function(res) {
         var HUE =jsonfile[i].energy*100 + 145
         var SAT =300
         var BRI = 360
-        
-        // stroke(HUE, SAT, BRI)
-        // point(i%square, int(i/square))
-        // point(i%square+1, int(i/square))
-        // point(i%square, int(i/square+1))
-        // point(i%square+1, int(i/square+1))
 
         var x = offset + cos(angle) * scalar 
         var y = offset2 + sin(angle) * scalar 

@@ -2,6 +2,7 @@
 let ball
 let HUE =0;
 let SAT = 150
+let reverse
 
 
 function setup() {
@@ -17,7 +18,7 @@ function draw() {
 
 
 
-    HUE += 2.5
+    HUE += 2
     if(HUE >= 360){HUE = 0}
     SAT += 1.23
     if(SAT >= 360){SAT = 100}
@@ -37,25 +38,31 @@ class Balls{
         this.yspeed = 7;
     }
     move() {
-        let change = random(1,3)*random(0.5,2.2)
+        let change = random(0.5,5)*random(0.5,1.25)
         this.x += this.xspeed
         this.y += this.yspeed
-        if (this.x > width - this.diameter || this.x < this.diameter){
+        if (this.x >= width - this.diameter+1 || this.x <= this.diameter-1){
+            this.xspeed = -this.xspeed;
             if(this.xspeed > 0){this.xspeed +=change}
             if(this.xspeed < 0){this.xspeed -=change}
-            this.xspeed = -this.xspeed;
-            if(this.xspeed > 70){this.xspeed = random(-7,7)}
+
+            
+
+            if(this.xspeed > 40){this.xspeed = random(-10,10)}
            // this.xspeed = this.xspeed * cos(random(PI *2))
-           if(this.x > 1100 || this.x < -20){this.x=540}
+           if(this.x > 1120 || this.x < -40){this.x=540}
 
         }
-        if (this.y > height - this.diameter || this.y < this.diameter) {
+        if (this.y >= height - this.diameter+1 || this.y <= this.diameter-1) {
+            this.yspeed = -this.yspeed ;
             if(this.yspeed > 0){this.yspeed +=change}
             if(this.yspeed < 0){this.yspeed -=change}
-            this.yspeed = -this.yspeed ;
-            if(this.yspeed > 70){this.yspeed = random(-7,7)}
+
+            
+
+            if(this.yspeed > 40){this.yspeed = random(-10,10)}
           //  this.yspeed = this.yspeed * sin(random(PI *2))
-            if(this.y > 740 || this.y < -20){this.y=370}
+            if(this.y > 760 || this.y < -40){this.y=370}
     
         }
 

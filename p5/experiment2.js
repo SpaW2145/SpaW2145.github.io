@@ -21,8 +21,8 @@ function draw() { // wird dauernd im loop aufgerufen
 
 		push()
 		translate(50*x +margin  ,50*y+margin)
-		rotateX(frameCount*random(0.01,0.02))	
-		rotateY(frameCount*random(0.01,0.02))
+		rotateX(frameCount*0.01)	
+		rotateY(frameCount*0.01)
 		box(20)
 		pop()
 		

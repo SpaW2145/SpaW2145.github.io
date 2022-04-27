@@ -1,33 +1,26 @@
-var y=0
-var HUE = 0
-var SAT = 20
-var u =0
-var v = 0
+var margin = 75
+var anzahl_punkte = 10;
+var random_range = 5;
 
 function setup() {
-createCanvas(1080,720);
-angleMode(DEGREES);
-colorMode(HSB,360);
-background(360,0,0)
-
+	createCanvas(1080, 720);
+	frameRate(25);
+	rectMode(CENTER);
+	//	noLoop();
 }
 
-function draw() {
-    
-    rect(0,0,200,200)
-    fill(0)
+function draw() { // wird dauernd im loop aufgerufen
+	background(255);
+	noStroke();
+	fill(0, 100);
+	//	noFill();
+	for (var iy = 0; iy < anzahl_punkte; iy++) {
+		var y = map(iy, 0, anzahl_punkte - 1,margin, height - margin);
+		for (var ix = 0; ix < anzahl_punkte; ix++) {
+			var x = map(ix, 0, anzahl_punkte - 1, margin, width - margin );
 
-    for(var i =0;i< height; i++){
-        HUE = map(i   ,0,height,   0,360)
-        stroke(HUE,360,300)
-        line(0,i,width,i)
-    }
-    stroke(360,360,360,100)
-    ellipse(u,v,10,10)
-    u++
-    v++
+			rect(x , y, 50, 50);
+		}
+	}
 
-
-
- 
 }

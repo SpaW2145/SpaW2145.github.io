@@ -107,6 +107,36 @@ body{
 
 }*/
 
+.docu{
+  padding-left: 5%;
+  color:#f2f2f2;
+
+}
+
+.px20 {
+  font-size: 40px
+}
+.summary{
+  text-align: center;
+  font-size: 25px;
+
+}
+.summary a:link{
+  outline: 0;
+  color:aqua
+
+}
+.summary a:visited{
+  color:aqua
+
+}
+.doctitle {
+  text-align: center;
+  font-size:30px;
+}
+
+
+
 h1 {
   overflow:hidden;
   text-align: center;

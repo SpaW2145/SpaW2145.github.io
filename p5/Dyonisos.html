@@ -28,161 +28,133 @@
       <a href="./Photo_gallery.html">Photo Gallery</a>  
       <a href="./experiments.html">Experiments</a>  
     </div>
+    <div class="docu">
+    <div class="px20">Project Documentation<br>
+Dyonisos<br>
+</div>
 
-    <div class="floater">
-      <div class="words word-1">
-        <span>W</span>
-        <span>E</span>
-        <span>L</span>
-        <span>C</span>
-        <span>O</span>
-        <span>M</span>
-        <span>E</span>
-      </div>
-      
-      <div class="words word-2">
-        <span>T</span>
-        <span>O</span>
-      </div>
+Software: HTML, Javascript, p5.js<br>
+<br>
 
-      <div class="words word-3">
-        <span>T</span>
-        <span>H</span>
-        <span>E</span>
-      </div>
-      
-      <div class="words word-4">
-        <span>G</span>
-        <span>A</span>
-        <span>L</span>
-        <span>L</span>
-        <span>E</span>
-        <span>R</span>
-        <span>Y</span>
-      </div>
-    </div>
+Dyonisos is a series of programs aimed at getting leisure data.<br>
+It's first task is to get the music listened to by the user, and transform a global array of songs into a series of pictures.<br>
+These pictures are made from each song giving a color to a pixel depending on it's features.<br>
+<br>
+<div class="summary">
+Plan Summary<br>
+<br>
+<a href="#I" >I- Spotify API</a><br>
+<br>
+    <a href="#Auth" >I.a Authcode<br></a>
     <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+    <a href="#App" >I.b App code(requests)<br></a>
+    <br>
+    <a href="#Express" >I.c express server json<br></a>
+    <br>
+<a href="#II" >II- HTML p5.js<br></a>
+<br>
+  <a href="#P5" >II.a p5.js<br></a>
+    <br>
+    <a href="#HTML" >II.b HTML platform<br></a>
+<br>
+<a href="#III" >III- Final Images<br></a>
+<br>
+</div>
+<p class="doctitle" id="I">I- The Spotify API</p><br>
 
-    <script>$(document).scroll(function() {
-      var y = $(this).scrollTop();
-      if (y > 400) {
-        $('.carousel').fadeIn();
-        $('.p_text').fadeIn();
-      } else {
-        $('.carousel').fadeOut();
-        $('.p_text').fadeOut();
-      }
-    });</script>
+<br>
+    First off I have to find a way to have my app access the music I listen to.<br>
+The best way to do that is with the spotify API, already documented, free of use and very dev friendly.<br>
 
-    <section class="carousel" aria-label="Gallery">
-      <ol class="carousel__viewport">
-        <li id="carousel__slide1"
-            tabindex="0"
-            class="carousel__slide">
-          <div class="carousel__snapper" class= "box boxed">
-          </div>
-          <div class="box2"><img src="./data/karl saft_karl saft_pdt.jpg"></div>
-        </li>
-        <li id="carousel__slide2"
-            tabindex="0"
-            class="carousel__slide">
-          <div class="carousel__snapper"></div>
-          <div class="box2"><img src="./data/die uhr_Plan de travail 1.jpg"></div>
-        </li>
-        <li id="carousel__slide3"
-            tabindex="0"
-            class="carousel__slide">
-          <div class="carousel__snapper" ></div>
-          <div class="box2"><img src="./data/abend mode_abend_mode_pdt.jpg"></div>
-        </li>
-        <li id="carousel__slide4"
-            tabindex="0"
-            class="carousel__slide">
-          <div class="carousel__snapper"></div>
-          <div class="box2"><img src="./data/schauburg_svchauburg_pdt.jpg"></div>
-        </li>
-        <li id="carousel__slide5"
-            tabindex="0"
-            class="carousel__slide">
-          <div class="carousel__snapper"></div>
-          <div class="box2"><img src="./data/Lebensraum_lebensraum_pdt.jpg"></div>
-        </li>
-        <li id="carousel__slide6"
-            tabindex="0"
-            class="carousel__slide">
-          <div class="carousel__snapper"></div>
-          <div class="box2"><img src="./data/helden bar_helden_bar.jpg"></div>
-        </li>
-        <li id="carousel__slide7"
-            tabindex="0"
-            class="carousel__slide">
-          <div class="carousel__snapper"></div>
-          <div class="box2"><img src="./data/schones wohnen_online wohnen_pdt.jpg"></div>
-        </li>
-        <li id="carousel__slide8"
-            tabindex="0"
-            class="carousel__slide">
-          <div class="carousel__snapper"></div>
-          <div class="box2"><img src="./data/orion_orion_pdt.jpg"></div>
-        </li>
-        <li id="carousel__slide9"
-            tabindex="0"
-            class="carousel__slide">
-          <div class="carousel__snapper"></div>
-          <div class="box1"><img src="./data/bahn.jpg"></div>
-        </li>
-      </ol>
-      <aside class="carousel__navigation">
-        <ol class="carousel__navigation-list">
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide1"
-               class="carousel__navigation-button">Go to slide 1</a>
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide2"
-               class="carousel__navigation-button">Go to slide 2</a>
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide3"
-               class="carousel__navigation-button">Go to slide 3</a>
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide4"
-               class="carousel__navigation-button">Go to slide 4</a>
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide5"
-               class="carousel__navigation-button">Go to slide 5</a>
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide6"
-               class="carousel__navigation-button">Go to slide 6</a>
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide7"
-               class="carousel__navigation-button">Go to slide 7</a>
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide8"
-               class="carousel__navigation-button">Go to slide 8</a>
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide9"
-               class="carousel__navigation-button">Go to slide 9</a>
-          </li>
+On the Spotify Developers website, I need to register my app.<br>
 
-          </li>
-        </ol>
-      </aside>
-    </section>
-    <div>
+Once the app is registered, I can access my Dashboard. This will give me my ID token and secret Token.<br>
+
+<p id="Auth">I.a - Auth Code<br></p>
+
+Now that my app is registered I need to code it.<br>
+For that I got an example access code to the API on Github.(link to git)<br>
+
+After setting up your ID Token, your secret token, and your scope, the latter will define what the app has access to when connecting to my account.<br>
+Here what really is interesting is the currently-playing song, so in my scope i put currently-playing.<br>
+Then through express I’ll connect a local server to spotify with my account.<br>
+This server will also be used later to store the json file.<br>
+
+<p id="App">I.b - App Requests<br></p>
+
+First off, I put a failsafe in. If there is ever a null or undefined data, instead of stopping, the app will just wait for the next call.<br>
+
+
+The app works with requests and callbacks. That’s why I decided to make it work on a timer, every 2 seconds the request will be executed.<br>
+
+
+The request is for the song’s data, the song’s name, ID, spotify uri and a lot of information I’m not interested in. What I want are the song’s features, that’s why now i will request the song’s features too.<br>
+
+I’m asking the spotify servers for the features of the currently playing song, which I got earlier.<br>
+
+
+For the sake of just having the information I ask for all of these features:<br>
+
+
+Even though I’m only using, duration, loudness, energy and valence.<br>
+
+<p id="Express">I.c - Json File and Express<br></p>
+
+To store my data I chose to use Json as a format, because it can store arrays more easily than a text file. So I will include the fs library in my code to write and read json files.<br>
+
+After I get the features what I will do is directly Write them up as part of the array in the Json under the song’s name:<br>
+
+
+
+
+
+
+
+To make sure I don’t write the same songs twice in a loop I read the last data from the json File, if the song playing has the same name as the last song from the file, it won’t be added to the list now.<br>
+
+
+
+Once a song is added to the list, it is defined as the old song to compare it to the next call of the next loop.<br>
+
+The Json file is stored onto the Express Web framework’s local server to be used by the p5.js part of the project.<br>
+
+<p id="II">II- The Visual Interface<br></p>
+
+In this part the goal is to take the data and transform it into a visual piece of art/media.For that I use 4 of the features from spotify’s song data:<br>
+ energy, valence and loudness changing the color and duration changing the size of each point.<br>
+
+ <p id="P5">II.a - p5.js</p>
+First I have to fetch the json on the express local server:<br>
+
+Then it will be run through by a for, extracting each song’s information, and then display it with a different color and size depending on its features.<br>
+To have the data displayed as something more than just a table, I made points(or more accurately circles) represent each song.<br>
+Their color and size are defined by their features, for example:<br>
+
+a song of energy 0.8 will have a deeper blue than a song with 0.4 energy, which will have a more greenish blue.<br>
+The longer the song is, the bigger the dot is.<br>
+
+Then each of the three main features used here use a different scalar and angle to create different spirals.<br>
+Finally to save the pictures let’s add a save picture on click in the middle of the screen option.<br>
+
+
+<p id="HTML">II.b - HTML platform<br></p>
+Here the only reason we need HTML is to view the javascript, so to access it very easily I put it on my website. <br>
+
+In the body part I just quickly insert the script to the sketch below my navigation, and in the css we define the p5.js class, 
+which is included with p5.js’s script, to have a size of 100% of the screen.<br>
+
+
+<p id="III">III- Final Images<br></p>
+The final images are then formed from all the songs i have been listening to, and after a month and approximately 1200 songs later,<br> 
+it looks like this :<br>
+
+Valence<br>
+
+Energy<br>
+
+Loudness<br>
+</div>
+
       <div class="p_text">
         " This Website is made to make you go cracra - " <br><br>
         Feodor Rousse

@@ -10,6 +10,7 @@ createCanvas(1080,720);
 colorMode(HSB,360);
 ball = new Balls()
 background(0,350)
+frameRate(120)
 
 
 }

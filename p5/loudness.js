@@ -38,6 +38,7 @@ fetch('http://localhost:8408/json').then(function(res) {return res.json()}).then
         angle += 12.7;
         scalar += 0.28;
         size += 0.015
+        
     }
     
 })

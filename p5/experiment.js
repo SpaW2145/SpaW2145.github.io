@@ -1,26 +1,45 @@
-var margin = 75
-var anzahl_punkte = 10;
-var random_range = 5;
+var margin = 50
+var maxX = 20	
+var maxY = 15
+
 
 function setup() {
-	createCanvas(1080, 720);
-	frameRate(25);
+	createCanvas(1080, 720,WEBGL);
+	colorMode(HSB,360)
 	rectMode(CENTER);
 	//	noLoop();
+	ball = new Boxes()
 }
 
 function draw() { // wird dauernd im loop aufgerufen
-	background(255);
-	noStroke();
-	fill(0, 100);
-	//	noFill();
-	for (var iy = 0; iy < anzahl_punkte; iy++) {
-		var y = map(iy, 0, anzahl_punkte - 1,margin, height - margin);
-		for (var ix = 0; ix < anzahl_punkte; ix++) {
-			var x = map(ix, 0, anzahl_punkte - 1, margin, width - margin );
+	background(0);
+	fill(50,50,150)
+	translate(-540,-360)
+	maxX = mouseX/20
+	maxY = mouseY/20
+	
 
-			rect(x , y, 50, 50);
+		push()
+		translate(width/2  ,height/2)
+		ball.move()
+		ball.display()
+		/*rotateX(frameCount*0.01)	
+		rotateY(frameCount*0.01)
+		box(20)*/
+		pop()
+		
 		}
+class Boxes{
+	move(){
+		
+		rotateX(frameCount*0.01)
+		rotateY(frameCount*0.01)
+	
+	}
+	display(){
+		noFill()
+		stroke(0,0,360)
+		box(400)
 	}
 
 }

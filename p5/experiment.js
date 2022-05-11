@@ -3,8 +3,9 @@ var maxX = 20
 var maxY = 15
 let posX,posY,posZ;
 var time =0;
-var time_speed = 0.1;
+var speed = 0;
 var radius = 50
+var HUE= 0
 
 
 function setup() {
@@ -14,6 +15,7 @@ function setup() {
 	//	noLoop();
 	ball = new Boxes()
 	bee = new Mover()
+	background(0,300);
 }
 
 function draw() { // wird dauernd im loop aufgerufen
@@ -22,7 +24,8 @@ function draw() { // wird dauernd im loop aufgerufen
 	translate(-540,-360)
 	maxX = mouseX/20
 	maxY = mouseY/20
-	
+	HUE += 3.5
+    if(HUE >= 360){HUE = 0}
 	
 
 		push()
@@ -56,16 +59,19 @@ class Boxes{
 class Mover{
 
 	move(){
-		this.posX = cos(time* noise(1.5,3)) * radius
-		this.posY =  sin(time*noise(1.5,3)) * radius
-		this.posZ = (cos(time)+sin(time))/noise(1.5/2.2) * radius
+		this.posX = cos(speed* noise(1.5,3)) * (radius+30)
+		this.posY =  sin(speed*noise(1.5,3)) * (radius+30)
+		this.posZ = (cos(speed)+sin(speed))/noise(1.5/2.2) * radius
 		translate(this.posX, this.posY,this.posZ)
-		time+=0.1
+		speed+=0.02
 
 	
 	}
 	display(){
-		fill(180,360,360)
+		HUE = this.posX + this.posY
+		if(HUE < 0){HUE = -HUE}
+		stroke(360,0,0)
+		fill(HUE*2+20,330,360)
 		box(40)
 	}
 }

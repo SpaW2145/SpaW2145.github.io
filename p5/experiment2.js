@@ -37,12 +37,13 @@ function draw() { // wird dauernd im loop aufgerufen
 }
 
 class Boxes{
-	/*constructor(){
+	constructor(){
 		this.hue = random(0,360)
 		this.sat = random(280,360)
 		this.bri = 360
+		
 
-	}*/
+	}
 	move(){
 		
 		rotateX(frameCount*0.01)
@@ -50,7 +51,7 @@ class Boxes{
 	
 	}
 	display(){
-		fill(random(0,360),random(280,360),360)
+		fill(this.hue,random(200,360),360)
 		box(30)
 	}
 

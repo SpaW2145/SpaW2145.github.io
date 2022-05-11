@@ -12,6 +12,7 @@ function setup() {
 }
 
 function draw() { // wird dauernd im loop aufgerufen
+
 	background(0);
 	fill(50,50,150)
 	translate(-540,-360)
@@ -21,10 +22,11 @@ function draw() { // wird dauernd im loop aufgerufen
 		for(var y=0; y<maxY;y++){
 
 
+
 		push()
 		translate(50*x +margin  ,50*y+margin)
 		ball.move()
-		ball.display()
+		ball.display()	
 		pop()
 		
 		}

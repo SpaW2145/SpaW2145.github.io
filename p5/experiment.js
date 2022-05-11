@@ -24,8 +24,7 @@ function draw() { // wird dauernd im loop aufgerufen
 	translate(-540,-360)
 	maxX = mouseX/20
 	maxY = mouseY/20
-	/*HUE += 3.5
-    if(HUE >= 360){HUE = 0}*/
+
 	
 
 		push()
@@ -33,9 +32,7 @@ function draw() { // wird dauernd im loop aufgerufen
 		ball.move()
 		ball.display()
 
-		/*rotateX(frameCount*0.01)	
-		rotateY(frameCount*0.01)
-		box(20)*/
+
 		bee.move()
 		bee.display()
 		pop()

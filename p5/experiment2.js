@@ -15,8 +15,8 @@ function draw() { // wird dauernd im loop aufgerufen
 	background(0);
 	fill(50,50,150)
 	translate(-540,-360)
-	maxX = mouseX/20
-	maxY = mouseY/20
+	maxX = mouseX/54
+	maxY = mouseY/55
 	for(var x=0; x <maxX ; x+= 1){
 		for(var y=0; y<maxY;y++){
 
@@ -25,29 +25,22 @@ function draw() { // wird dauernd im loop aufgerufen
 		translate(50*x +margin  ,50*y+margin)
 		ball.move()
 		ball.display()
-		/*rotateX(frameCount*0.01)	
-		rotateY(frameCount*0.01)
-		box(20)*/
 		pop()
 		
 		}
 	}
 	
 
-	/*push()
-	translate(margin,margin)
-	rotateX(frameCount*0.01)	
-	rotateY(frameCount*0.01)
-	box(20)
-	pop()
-	push()
-	translate(margin,margin)
-	box(20)
-	pop()
-	rect(50,50,50,50)*/
+
 }
 
 class Boxes{
+	/*constructor(){
+		this.hue = random(0,360)
+		this.sat = random(280,360)
+		this.bri = 360
+
+	}*/
 	move(){
 		
 		rotateX(frameCount*0.01)

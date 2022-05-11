@@ -32,8 +32,8 @@ function draw() { // wird dauernd im loop aufgerufen
 class Boxes{
 	move(){
 		
-		rotateX(frameCount*0.01)
-		rotateY(frameCount*0.01)
+		rotateX(-maxY*0.05)
+		rotateY(maxX*0.05)
 	
 	}
 	display(){

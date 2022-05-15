@@ -6,6 +6,7 @@ var time =0;
 var speed = 0;
 var radius = 50
 var HUE= 0
+var SAT =0
 
 
 function setup() {
@@ -13,9 +14,9 @@ function setup() {
 	colorMode(HSB,360)
 	rectMode(CENTER);
 	//	noLoop();
-	ball = new Boxes()
+	room = new Boxes()
 	bee = new Mover()
-	background(0,300);
+
 }
 
 function draw() { // wird dauernd im loop aufgerufen
@@ -29,8 +30,8 @@ function draw() { // wird dauernd im loop aufgerufen
 
 		push()
 		translate(width/2  ,height/2)
-		ball.move()
-		ball.display()
+		room.move()
+		room.display()
 
 
 		bee.move()
@@ -56,19 +57,20 @@ class Boxes{
 class Mover{
 
 	move(){
-		this.posX = cos(speed* noise(1.5,3)) * (radius+30)
-		this.posY =  sin(speed*noise(1.5,3)) * (radius+30)
-		this.posZ = (cos(speed)+sin(speed))/noise(1.5/2.2) * radius
+		this.posX = cos(speed* noise(1.5,3)) * (radius+100)
+		this.posY =  sin(speed*noise(1.5,3)) * (radius+100)
+		this.posZ = (cos(speed)+sin(speed))/noise(1.5/2.2) * (radius-20)
 		translate(this.posX, this.posY,this.posZ)
 		speed+=0.02
 
 	
 	}
 	display(){
-		HUE = this.posX + this.posY
-		if(HUE < 0){HUE = -HUE}
+		HUE = map(this.posX,-140,140,0,350)
+		SAT = map(this.posY,-140,140,100,360)
+		//if(HUE < 0){HUE = -HUE}
 		stroke(360,0,0)
-		fill(HUE*2+20,330,360)
+		fill(HUE,SAT,360)
 		box(40)
 	}
 }

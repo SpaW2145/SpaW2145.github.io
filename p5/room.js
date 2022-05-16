@@ -10,7 +10,8 @@ var SAT =0
 
 
 function setup() {
-	createCanvas(1080, 720,WEBGL);
+	var canvas =createCanvas(1080, 720,WEBGL);
+	canvas.parent('p5sketch')
 	colorMode(HSB,360)
 	rectMode(CENTER);
 	//	noLoop();
@@ -20,11 +21,11 @@ function setup() {
 }
 
 function draw() { // wird dauernd im loop aufgerufen
-	background(0,300);
+	background(0,200);
 	fill(50,50,150)
 	translate(-540,-360)
-	maxX = mouseX/20
-	maxY = mouseY/20
+	maxX = mouseX/54
+	maxY = mouseY/55
 
 	
 
@@ -43,8 +44,8 @@ function draw() { // wird dauernd im loop aufgerufen
 class Boxes{
 	move(){
 		
-		rotateX(-maxY*0.05)
-		rotateY(maxX*0.05)
+		rotateX(-maxY*0.7)
+		rotateY(maxX*0.7)
 	
 	}
 	display(){
@@ -59,7 +60,7 @@ class Mover{
 	move(){
 		this.posX = cos(speed* noise(1.5,3)) * (radius+100)
 		this.posY =  sin(speed*noise(1.5,3)) * (radius+100)
-		this.posZ = (cos(speed)+sin(speed))/noise(1.5/2.2) * (radius-20)
+		this.posZ = (cos(speed)+sin(speed))/noise(1.5/2.2) * (radius-12)
 		translate(this.posX, this.posY,this.posZ)
 		speed+=0.02
 
@@ -69,8 +70,9 @@ class Mover{
 		HUE = map(this.posX,-140,140,0,350)
 		SAT = map(this.posY,-140,140,100,360)
 		//if(HUE < 0){HUE = -HUE}
-		stroke(360,0,0)
+		noStroke()
+		//stroke(360,0,0)
 		fill(HUE,SAT,360)
-		box(40)
+		sphere(40)
 	}
 }

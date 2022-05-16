@@ -99,13 +99,24 @@ body{
     font-family: 'Archivo Black', sans-serif;;
       
 }
+.p5holder{
+  margin: 0;
+  display: flex;
 
-/*.p5Canvas{
+  /* This centers our sketch horizontally. */
+  justify-content: center;
 
-    width:100%!important;
-    height:100%!important;
+  /* This centers our sketch vertically. */
+  align-items: center;
+}
 
-}*/
+.p5Canvas{
+
+    /*width:100%!important;
+    height:100%!important;*/
+    align-self: center!important;
+
+}
 
 .docu{
   padding-left: 5%;

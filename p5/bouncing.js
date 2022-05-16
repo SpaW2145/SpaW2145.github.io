@@ -6,7 +6,8 @@ let reverse
 
 
 function setup() {
-createCanvas(1080,720);
+var canvas = createCanvas(1080,720);
+canvas.parent('p5sketch')
 colorMode(HSB,360);
 ball = new Balls()
 background(0,350)

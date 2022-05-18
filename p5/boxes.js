@@ -28,8 +28,7 @@ function draw() { // wird dauernd im loop aufgerufen
 
 		for(var y=0; y<maxY;y++){
 
-
-			for(var i = 0;i<maxI; i+=1)
+ 
 		boxes.push(new Boxes(x,y))
 
 
@@ -38,7 +37,7 @@ function draw() { // wird dauernd im loop aufgerufen
 		translate(50*x +margin ,50*y+margin)
 		boxes[x].move()
 		boxes[x].display()
-		boxes[y].move()
+		boxes[y].move() 
 		boxes[y].display()
 
 		pop()

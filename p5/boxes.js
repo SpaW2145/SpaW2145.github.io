@@ -2,6 +2,7 @@ var margin = 60
 var maxX = 20	
 var maxY = 15
 let boxes =[]
+let boxes2 = []
 let json ={}
 
 
@@ -22,14 +23,14 @@ function draw() { // wird dauernd im loop aufgerufen
 	translate(-540,-360)
 	maxX = mouseX/54
 	maxY = mouseY/55
-	maxI = maxX + maxY
+
 	for(var x=0; x <maxX ; x+= 1){
 
-
+		boxes.push(new Boxes(x))
 		for(var y=0; y<maxY;y++){
 
  
-		boxes.push(new Boxes(x,y))
+		boxes2.push(new Boxes(y))
 
 
 
@@ -37,8 +38,8 @@ function draw() { // wird dauernd im loop aufgerufen
 		translate(50*x +margin ,50*y+margin)
 		boxes[x].move()
 		boxes[x].display()
-		boxes[y].move() 
-		boxes[y].display()
+		boxes2[y].move() 
+		boxes2[y].display()
 
 		pop()
 

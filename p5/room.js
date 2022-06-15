@@ -10,7 +10,7 @@ var SAT =0
 
 
 function setup() {
-	var canvas =createCanvas(1080, 720,WEBGL);
+	var canvas = createCanvas(1080, 720,WEBGL);
 	canvas.parent('p5sketch')
 	colorMode(HSB,360)
 	rectMode(CENTER);

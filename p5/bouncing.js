@@ -24,9 +24,9 @@ function draw() {
 
     //HUE += 3.5
     //if(HUE >= 360){HUE = 0}
-    SAT += 1.23
-    if(SAT >= 360){SAT = 100}
-    HUE =map(HUE,this.x,width,0,360)
+    //SAT += 1.23
+    //if(SAT >= 360){SAT = 100}
+    
 
 
     ball.move()
@@ -38,7 +38,7 @@ class Balls{
     constructor(){
         this.x = 500
         this.y = 500
-        this.diameter = 10
+        this.diameter = 15
         this.xspeed = 7;
         this.yspeed = 7;
     }
@@ -75,8 +75,10 @@ class Balls{
       }
     
       display() {
-        stroke(HUE,300,360)
-        fill(HUE,300,360)
+        HUE = map(this.xspeed,-40,40,50,360)
+        SAT = map(this.x,0,width,150,360)
+        stroke(SAT,HUE,360)
+        fill(SAT,HUE,360)
         rect(this.x, this.y, this.diameter, this.diameter);
       }
 }

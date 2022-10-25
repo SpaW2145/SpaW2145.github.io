@@ -75,6 +75,6 @@ class Balls{
       display() {
         stroke(HUE,300,360)
         fill(HUE,300,360)
-        ellipse(this.x, this.y, this.diameter, this.diameter);
+        rect(this.x, this.y, this.diameter, this.diameter);
       }
 }

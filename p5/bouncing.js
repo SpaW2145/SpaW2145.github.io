@@ -12,6 +12,7 @@ colorMode(HSB,360);
 ball = new Balls()
 background(0,350)
 frameRate(120)
+rectMode(CENTER)
 
 
 }

@@ -10,6 +10,7 @@ var canvas = createCanvas(1080,720);
 canvas.parent('p5sketch')
 colorMode(HSB,360);
 ball = new Balls()
+ball2 = new Balls()
 background(0,350)
 frameRate(120)
 rectMode(CENTER)
@@ -31,6 +32,8 @@ function draw() {
 
     ball.move()
     ball.display()
+    ball2.move()
+    ball2.display()
 }
 
 

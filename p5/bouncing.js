@@ -22,10 +22,11 @@ function draw() {
 
 
 
-    HUE += 3.5
-    if(HUE >= 360){HUE = 0}
+    //HUE += 3.5
+    //if(HUE >= 360){HUE = 0}
     SAT += 1.23
     if(SAT >= 360){SAT = 100}
+    HUE =map(HUE,xspeed,40,0,360)
 
 
     ball.move()

@@ -131,7 +131,7 @@ class Ballsy{
     }
   
     display() {
-      HUE = map(this.xspeed,-40,40,50,360)
+      HUE = map(this.xspeed,0,abs(40),50,360)
       SAT = map(this.x,0,width,0,150)
       stroke(SAT,HUE,360)
       fill(SAT,HUE,360)

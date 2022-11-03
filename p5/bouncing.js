@@ -72,7 +72,7 @@ class Balls{
 
             
 
-            if(this.yspeed > 40){this.yspeed = random(-10,10)}
+            if(this.yspeed > 50){this.yspeed = random(-10,10)}
           //  this.yspeed = this.yspeed * sin(random(PI *2))
             if(this.y > 760 || this.y < -40){this.y=370}
     
@@ -82,7 +82,7 @@ class Balls{
       }
     
       display() {
-        HUE = map(this.xspeed,-40,40,50,360)
+        HUE = map(abs(this.xspeed),0,50,0,360)
         SAT = map(this.x,0,width,150,360)
         stroke(SAT,HUE,360)
         fill(SAT,HUE,360)

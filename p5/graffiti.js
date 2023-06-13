@@ -1,160 +1,102 @@
-let xoff = 2.0;
-let yoff = 1.0;
+let xoff = 500.0;
+let yoff = 300.0;
+let zoff = 30;
+
+let uoff = 500.0;
+let voff = 300.0;
+let noff = 30;
 
 
+let xsp = 0.003;
+let ysp = 0.003;
+let zsp = 0.003;
 
-let xsp = 0.0003;
-let ysp = 0.0003;
+let usp = 0.003;
+let vsp = 0.003;
+let nsp = 0.003;
 
 function setup() {
 
-   let nseed = int(random(250));
-    // noiseSeed(12);
+
+    frameRate(30);
   
 
     colorMode(HSB,360)
     rectMode(CENTER);
-  createCanvas(1000, 1000);
-  background(0);
-  /*  createCanvas(1200, 900); */
+  var canvas = createCanvas(1080,720,WEBGL);
+	canvas.parent('p5sketch')
 
-    // text("noiseSeed:   " +﻿nseed,100,100);
+
   
 }
 
 function draw() {
-  background(0, 15);
+  background(0,0,0, 300);
  
  
-  /* background(255,10);  */
-  for (let i = 0; i < 15; i++) {
+ 
+  
 
     
     xoff += xsp;
     yoff += ysp;
+    zoff += zsp;
 
-    let x = map(noise(xoff), 0, 1, 0, width+200);
-    let y = map(noise(yoff), 0, 1, 0, height+200);
+    uoff += usp;
+    voff += vsp;
+    noff += nsp;
+
+
+    push()
+    noiseSeed(80)
     stroke(0,80)
+    let x = map(noise(xoff), 0, 1, -500, 500);
+    let y = map(noise(yoff), 0, 1, -500, 500);
+    let z = map(noise(zoff), 0, 1, -500, 500);
+    translate(x,0,z)
     fill
-      (map(x, width, length, 360, 0), 
-      map(y, width, length, 200, 360), 
-      map(x, width, length, 200, 255));
-    ellipse(x, y, 50,15);
-  }
+    (map(x, -500, 500, 360, 0),map(z, -500, 500, 360, 0), 360);
+    ellipse(0, 0, 30,30);
+    pop()
+
+    push()
+    noiseSeed(99)
+    stroke(0,80)
+    let u = map(noise(uoff), 0, 1, -400, 400);
+    let v = map(noise(voff), 0, 1, -400, 400);
+    let n = map(noise(noff), 0, 1, -400, 400);
+    translate(u,v,n)
+    fill
+    (map(u, -500, 500, 360, 0),map(n, -500, 500, 360, 0), 360);
+    ellipse(0, 0, 30,30);
+    pop()
+    
+
+    push()
+    strokeWeight(50)
+    stroke(260,360,360)
+    fill(180,50,360)
+    rotateY(frameCount*0.01)
+    rotateX(frameCount*0.01)
+    rotateZ(frameCount*0.01)
+    sphere(38, 12, 12)
+    pop()
+
+    
+
+    push()
+    noStroke()
+    //stroke(200,200,360)
+    fill(180,80,360)
+    rotateY(-frameCount*0.01)
+    rotateX(-frameCount*0.01)
+    rotateZ(-frameCount*0.01)
+    sphere(50)
+    pop()
+    
+
 }
 
+class Orbiters{
 
-
-
-
-
-
-
-
-// let xoff = 2.0;
-// let yoff = 1.0;
-// let rad = 0;
-// let farbe = 0;
-
-// let xsp = 0.001;
-// let ysp = 0.001;
-
-// function setup() {
-//   rectMode(CENTER);
-//    createCanvas(displayWidth, displayHeight);
-//    /*  createCanvas(1200, 900); */
-//   stroke(0,90);
-//   strokeWeight(0.9);
-// }
-
-// function draw() {
-//   /* background(255,10);  */
-//   for (let i = 0; i < 100; i++) {
-//      xsp = xsp;
-//      ysp = ysp;
-
-//     xoff = xoff + xsp;
-//     yoff = yoff + ysp;
-
-//     rad += 0.001;
-//     let x = map(noise(xoff),0,1,0, width);
-//     let y = map(noise(yoff),0,1,0, height);
-
-//     fill
-//     (map(rad,30,50,255,0), 
-//     map(rad,-10,40,0,255), 
-//     map(rad,-10,30,0,255),
-//    );
-
-
-//     if (rad >= 50) {
-//       noLoop();
-//     }
-
-
-//     //  circle(x+25, y, rad);
-//     rect(x, y, map(rad, 0, 50, 0, 50), map(rad, 0, 50, 0, 10));
-//   }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let xoff = 2.0;
-// let yoff = 1.0;
-// let rad = 50;
-// let farbe = 0;
-
-// let xsp = 0.008;
-// let ysp = 0.008;
-
-// function setup() {
-//   rectMode(CENTER);
-//   // createCanvas(displayWidth, displayHeight);
-//     createCanvas(1200, 900);
-//   stroke(0,90);
-// }
-
-// function draw() {
-//   /* background(255,10);  */
-//   for (let i = 0; i < 100; i++) {
-//      xsp = map(rad, 50, -10, 0.008, 0);
-//      ysp = map(rad, 50 , -10, 0.008, 0);
-
-//     xoff = xoff + xsp;
-//     yoff = yoff + ysp;
-
-//     rad -= 0.001;
-//     let x = map(noise(xoff),0,1,0, width);
-//     let y = map(noise(yoff),0,1,0, height);
-
-//     fill
-//     (map(rad,50,30,255,0), 
-//     map(rad,40,-10,0,255), 
-//     map(rad,30,-10,0,255)
-//     );
-
-
-//     if (rad <= -10) {
-//       noLoop();
-//     }
-
-
-//     //  circle(x+25, y, rad);
-//     rect(x, y, map(rad, 50, 0, 0, 50), map(rad, 50, 0, 0, 10));
-//   }
-// }
+}

@@ -3,7 +3,6 @@ var maxX = 20
 var maxY = 15
 let boxes =[]
 let boxes2 = []
-let json ={}
 
 
 function setup() {
